@@ -1,0 +1,42 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":enablePreCommit",
+    "schedule:monthly",
+    "regexManagers:dockerfileVersions",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(chore)",
+    "helpers:pinGitHubActionDigests",
+    "group:allNonMajor"
+  ],
+  "rebaseWhen": "conflicted",
+  "packageRules": [
+    {
+      "matchPackageNames": ["shellcheck-py/shellcheck-py"],
+      "versioning": "loose"
+    },
+    {
+      "matchPackageNames": ["astral-sh/ruff-pre-commit"],
+      "customChangelogUrl": "https://github.com/astral-sh/ruff"
+    },
+    {
+      "matchPackageNames": ["psf/black-pre-commit-mirror"],
+      "customChangelogUrl": "https://github.com/psf/black"
+    }
+  ],
+  "regexManagers": [
+    {
+      "description": "Update poetry",
+      "fileMatch": [
+        "^.+\\.yml$",
+        "^Dockerfile$"
+      ],
+      "matchStrings": [
+        "pip install( --upgrade)? poetry==(?<currentValue>\\S+?)\\s"
+      ],
+      "depNameTemplate": "poetry",
+      "datasourceTemplate": "pypi"
+    }
+  ]
+}

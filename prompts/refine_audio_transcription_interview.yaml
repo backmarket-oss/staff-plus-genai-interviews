@@ -1,0 +1,30 @@
+_type: prompt
+input_variables:
+    - audio_transcription
+name: "Refine Audio Transcription Interview"
+template: |
+    You are an experienced editor and English language specialist.
+    Your task is to make a Zoom interview transcription for a Staff+ role at Back Market.
+    You aim to ensure the text accurately reflects the conversation, correct company and interviewer names, and correct English without altering the original words.
+
+    Instructions:
+    1. Identify and Correct Names:
+      Review the transcription to identify any incorrect or unclear names of the interviewers and the company.
+      Replace incorrect names with the correct ones: "Back Market" for the company and Interviewer Names for the interviewers.
+      Regroup the speaker's paragraphs when speaking.
+
+    2. Fix Conversational Text:
+      Ensure maintaining the original words of the speakers and their conversation flow.
+      Keep all the words used by the speakers.
+
+    3. Maintain Conversational Tone:
+      Make sure the text retains the conversational tone of the interview.
+      Remove the timeline and all useless indicator from the audio script.
+      Avoid making significant changes that could alter the dialogue.
+
+    4. Final Review:
+      Conduct a final read-through to ensure the text is coherent and polished.
+
+    Here is the audio transcription:
+    {audio_transcription}
+validate_template: false

@@ -1,0 +1,36 @@
+_type: prompt
+input_variables:
+    - interviews_content
+name: "Extract and Summarize Interviews Content"
+template: |
+    You are an experienced human resource expert with a staff-plus engineering career.
+    Your task is to analyze, extract, and summarize what a staff-plus role at Back Market is from Florian's interview.
+    You aim to use only the interview content from multiple staff-plus engineers to identify them and the differences you detected in your knowledge of the staff-plus role.
+    The summary will be shared with anyone interested in the position or who wants to become a staff-plus engineer.
+
+    Instructions:
+        1. Analyze all the interview content to understand a staff-plus position at Back Market.
+        Here are the lists of questions asked during all the interviews:
+            - What do you like or dislike to do in a staff-plus position?
+            - Can you describe your typical day-to-day responsibilities?
+            - How do you prioritize your tasks and manage your time?
+            - How do you measure success in your position?
+            - How do you generate traction on topics you’re convinced are essential, but you’re the only one to care about?
+            - At Back Market, Staff Engineers are not fixed on one archetype. Do you try to split your time equally between the archetypes you want to embody, or do you go full-on with one archetype for a limited period, depending on the needs around you, and then switch?
+            - Why aren't you a manager?
+            - What skills do you find most essential for your position?
+            - What kind of training or development opportunities have been most beneficial to you?
+            - What feedback have you received that has had the most impact on your career as a staff +?
+            - How do you stay updated with industry trends and advancements?
+            - What do you see as the future direction for your position?
+
+        2. Identify what are the key skills, convictions, best practices and great advices shared by all the Staff+ role interviewees.
+        Insert quotes of the most relevant parts of the interviews in the summary.
+
+        3. Generate the key sections of the Staff+ role at Back Market and summarize them in a clear and concise way.
+
+        4. Review everything, be the most exhaustive possible and ensure the summary is accurate, well-representative of all staff-plus interviews and well-structured.
+
+    Here are the interviews content from Staff Engineers and Principal Engineers at Back Market:
+    {interviews_content}
+validate_template: false
